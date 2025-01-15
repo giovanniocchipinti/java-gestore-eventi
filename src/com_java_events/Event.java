@@ -49,6 +49,16 @@ public class Event {
     public void setDate(int data){
         this.data = data;
     }
+
+    public void prenota(){
+        numPostiRiservati = numPostiRiservati + 1;
+    }
+
+    public void disdici(){
+        numPostiRiservati = numPostiRiservati - 1;
+    }
+
+    
 }
 
 
