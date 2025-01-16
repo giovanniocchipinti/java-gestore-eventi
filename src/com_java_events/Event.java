@@ -4,12 +4,12 @@ public class Event {
 
     // variabili d'istanza
     private String titolo;
-    private int data;
+    private String data;
     private int numPostiTotale;
     private int numPostiRiservati = 0;
 
     // costruttore
-    public Event(String titolo, int data, int numPostiTotale){
+    public Event(String titolo, String data, int numPostiTotale){
         this.titolo = titolo;
         this.data = data;
         this.numPostiTotale = numPostiTotale;
@@ -29,7 +29,7 @@ public class Event {
         return titolo;
     }
 
-    public int getDate(){
+    public String getDate(){
         return data;
     }
 
@@ -46,7 +46,7 @@ public class Event {
         this.titolo = titolo;
     }
 
-    public void setDate(int data){
+    public void setDate(String data){
         this.data = data;
     }
 
@@ -58,7 +58,7 @@ public class Event {
         numPostiRiservati = numPostiRiservati - 1;
     }
 
-    
+
 }
 
 
