@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Main {public static void main(String[] args) {
+public class MainEvento {public static void main(String[] args) {
     try {
         Scanner scan = new Scanner(System.in);
 
@@ -23,7 +23,7 @@ public class Main {public static void main(String[] args) {
         System.out.println("Quante prenotazioni vuoi effettuare?");
         int numPrenotazioni = Integer.parseInt(scan.nextLine());
 
-        for(int i = 0; i < numPrenotazioni; numPrenotazioni++){
+        for(int i = 0; i < numPrenotazioni; i++){
             try {
                 evento.prenota();
             } catch (Exception e) {

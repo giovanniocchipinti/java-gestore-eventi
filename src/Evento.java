@@ -64,7 +64,7 @@ public class Evento {
             throw new IllegalStateException ("Impossibile disdire un evento già passato");
         }
         else if (postiPrenotati <= 0){
-            throw new IllegalStateException ("Non ci sono prenotazioni da disdire");
+            throw new IllegalStateException ("Non ci sono prenotazioni da disdire o il numero inserito è maggiore delle prenotazioni effettuate");
         }
         postiPrenotati--;
     }
