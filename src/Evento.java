@@ -45,6 +45,26 @@ public class Evento {
         return postiTotali;
     }
 
+    // metodo per prenotare
+    public void prenota(){
+        if(data.isBefore(LocalDate.now())){
+            throw new IllegalStateException ("Impossibile prenotare un evento già passato");
+        }
+        else if (postiPrenotati >= postiTotali){
+            throw new IllegalStateException ("L'evento è Sold Out");
 
+        }
+        postiPrenotati++;
+    }
 
-}
+    // metodo per disdire
+    public void disdici(){
+        if (data.isBefore(LocalDate.now())) {
+            throw new IllegalStateException ("Impossibile disdire un evento già passato");
+        }
+        else if (postiPrenotati <= 0){
+            throw new IllegalStateException ("Non ci sono prenotazioni da disdire");
+        }
+        postiPrenotati--;
+    }
+} 
