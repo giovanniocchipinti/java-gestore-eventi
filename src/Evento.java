@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Evento {
     // variabili d'istanza
@@ -66,5 +67,12 @@ public class Evento {
             throw new IllegalStateException ("Non ci sono prenotazioni da disdire");
         }
         postiPrenotati--;
+    }
+
+    // override metodo toString
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
+        return data.format(formatter) + " - " + titolo;
     }
 } 
